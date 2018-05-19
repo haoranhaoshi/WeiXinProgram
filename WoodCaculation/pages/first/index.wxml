@@ -1,0 +1,37 @@
+<view>
+  <view id='inputs'>
+    <view class='row'>
+      <text>长度：</text>
+      <input type='number' id='length' bindinput='lengthInput'></input>
+      <text>m：</text>
+    </view>
+    <view class='row'>
+      <text>直径：</text>
+      <input type='number' id='diameter' bindinput='diameterInput'></input>
+      <text>cm</text>
+    </view>
+    <view class='row'>
+      <text>数量：</text>
+      <input type='number' id='number' bindinput='numberInput'></input>
+      <text>根</text>
+    </view>
+    <view class='row'>
+      <text>单价：</text>
+      <input type='number' id='unitPrice' bindinput='unitPriceInput'></input>
+      <text>元/立方</text>
+    </view>
+  </view>
+
+  <button id='add' bindtap='addItem'>增加</button>
+  <view id='summary'>
+    <text class='summaryTitle'>共计：</text>
+    <text class='summary'>{{allNumber}}根</text>
+    <text class='summary'>{{allVolume}}立方</text>
+    <text class='summary'>{{allPrice}}元</text>
+  </view>
+  <scroll-view scroll-y="true">
+    <block wx:for="{{items}}" wx:key="*this">
+      <view class="item" id="item{{index}}">{{item.index}}:长{{item.length}}m,直径{{item.diameter}}cm,{{item.number}}根,{{item.unitPrice}}元/立方,{{item.itemVolume}}立方,{{item.itemPrice}}元</view>
+    </block>
+  </scroll-view>
+</view>

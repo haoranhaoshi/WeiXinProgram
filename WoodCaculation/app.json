@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/first/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#CCFFFF",
+    "navigationBarTitleText": "木材材积计算器",
+    "navigationBarTextStyle":"black"
+  }
+}
